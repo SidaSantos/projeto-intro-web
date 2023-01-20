@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/c5662f7648.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main id="home">
+      <div id="result"></div>
+      <header class="top">
+        <div class="container">
+          <figure>
+            <img src="./assets/logo.png" alt="Logo" />
+          </figure>
+
+          <nav>
+            <ul>
+              <li>
+                <a href="#home"> <button>Home</button> </a>
+              </li>
+              <li>
+                <a href="#destaque"> <button>Destaque</button> </a>
+              </li>
+              <li>
+                <a href="#catalogo"> <button>Catalogo</button> </a>
+              </li>
+              <li>
+                <a href="#contato"> <button>Contato</button> </a>
+              </li>
+            </ul>
+          </nav>
+
+          <section class="search">
+            <input
+              type="text"
+              id="search_input"
+            />
+            <button
+              onclick="buscarSerie(seriesAssistidas, this.previousElementSibling.value)"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </section>
+        </div>
+      </header>
+
+      <section class="slider-wrapper" id="destaque">
+        <!-- <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
+        <button class="slide-arrow" id="slide-arrow-next">&#8250;</button> -->
+        <ul class="slides-container" id="slides-container">
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+        </ul>
+      </section>
+
+      <section class="main_content" id="catalogo">
+        <div class="container">
+          <h2 class="title">Catálogo</h2>
+          <ul
+            class="gallery animate__animated animate__fadeInRight animate__slow"
+            id="grid_cards"
+          ></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contato">
+      <div class="container">
+        <figure>
+          <img src="./assets/logo.png" alt="Logo" />
+        </figure>
+
+        <p>
+          Criado por:
+          <a href="https://github.com/SidaSantos" target="_blank">
+            Maria Aparecida
+            <img src="./assets/owl-svgrepo-com.svg" alt="Coruja"
+          /></a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
